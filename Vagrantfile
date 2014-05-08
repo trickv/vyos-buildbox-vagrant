@@ -19,6 +19,9 @@ apt-get -y -t squeeze-backports install squashfs-tools
 # Install vim (because I can't live without it)
 apt-get -y install vim
 
+# Install tmux because vagrant only lets me have one ssh session
+apt-get -y install tmux
+
 # Install build dependencies
 apt-get -y install debian-archive-keyring git autoconf automake dpkg-dev live-helper syslinux genisoimage
 
