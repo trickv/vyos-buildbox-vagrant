@@ -29,9 +29,8 @@ echo "Now you're ready to proceed with fetching the build-iso source and buildin
 SCRIPT
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "DebianSqueeze64"
-  config.vm.box_url = "http://f.willianfernandes.com.br/vagrant-boxes/DebianSqueeze64.box"
-
+  config.vm.box = "puppetlabs-debian-607-x64-vbox4210-nocm"
+  config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210-nocm.box"
 
   config.vm.provider :virtualbox do |vb|
     #vb.gui = true
