@@ -37,8 +37,10 @@ Vagrant.configure("2") do |config|
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/debian-607-x64-vbox4210-nocm.box"
 
   config.vm.provider :virtualbox do |vb|
-    #vb.gui = true
-    vb.customize ["modifyvm", :id, "--memory", "2048"]
+    vb.gui = true
+    vb.memory = 2048
+    vb.cpus = 4
+    vb.customize ["modifyvm", :id, "--cpuexecutioncap", "95"]
   end
 
   config.vm.provision "shell", inline: $script
