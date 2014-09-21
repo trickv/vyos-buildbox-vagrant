@@ -23,6 +23,9 @@ apt-get -y install vim ack-grep tmux
 # Install build dependencies
 apt-get -y install git autoconf automake dpkg-dev live-helper syslinux genisoimage
 
+# Other bits I found later in development
+apt-get -y install build-essential devscripts
+
 # Set path
 set +e
 fgrep -q '# VyOS buildbox' /etc/bash.bashrc
