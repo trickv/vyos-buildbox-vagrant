@@ -45,6 +45,12 @@ Vagrant.configure("2") do |config|
     vb.customize ["modifyvm", :id, "--cpuexecutioncap", "95"]
   end
 
+  config.vm.provider :aws do |aws, override|
+    aws.ami = "ami-c33483b0" # Debian 6 image built by me
+    aws.region = "eu-west-1" # to match ami id
+    override.ssh.username = "root"
+  end
+
   config.vm.provision "shell", inline: $script
 end
 
